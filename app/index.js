@@ -1,18 +1,26 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        Hello World!
-      </div>
-    )
-  }
+
+import ViewPager from './components/ViewPager';
+import PlaylistViewer from './components/PlaylistViewer'
+
+import "./index.css";
+
+
+
+
+function App() {
+
+  return (
+    <div className="App">
+     <div className='container'>
+      <PlaylistViewer/>
+     </div>
+    </div>
+  );
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-)
+
+const rootElement = document.getElementById("app");
+ReactDOM.render(<App />, rootElement);
